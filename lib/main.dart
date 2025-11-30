@@ -1,5 +1,6 @@
 import 'package:booking/helper/constant/routes.dart';
 import 'package:booking/helper/test/navigation_observe.dart';
+import 'package:booking/presentation/views/appartement_details_view.dart';
 import 'package:booking/presentation/views/tenant_view.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +24,13 @@ class MyApp extends StatelessWidget {
       */
       debugShowCheckedModeBanner: false,
       navigatorObservers: [Observ()],
-      routes: {tenantView: (context) => TenantView()},
+      routes: {
+        tenantView: (context) => TenantView(),
+        appartementDetailsView: (context) => AppartementDetailsView(),
+      },
       initialRoute: tenantView,
     );
   }
 }
+
+

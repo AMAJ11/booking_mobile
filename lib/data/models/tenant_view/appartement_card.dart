@@ -1,10 +1,8 @@
+import 'package:booking/helper/constant/routes.dart';
 import 'package:booking/helper/constant/theme.dart';
 import 'package:booking/helper/methods/rem.dart';
+import 'package:booking/helper/test/image_network.dart';
 import 'package:flutter/material.dart';
-
-var networkImage = NetworkImage(
-  "https://cdn.bookingexperts.nl/uploads/image/image/302582/cover_ResidenceTerschelling_accommodatie_55_slaapkamer_8.jpg",
-);
 
 class AppartementCard extends StatelessWidget {
   const AppartementCard({super.key});
@@ -23,17 +21,21 @@ class AppartementCard extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Container(
-                    height: card.maxHeight * 0.6,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: networkImage,
-                      ),
-                      // color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, appartementDetailsView);
+                    },
+                    child: Container(
+                      height: card.maxHeight * 0.6,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: networkImage,
+                        ),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
                       ),
                     ),
                   ),

@@ -1,10 +1,8 @@
 import 'package:booking/helper/constant/theme.dart';
 import 'package:booking/helper/methods/rem.dart';
+import 'package:booking/helper/test/image_network.dart';
 import 'package:flutter/material.dart';
 
-var networkImage = NetworkImage(
-  "https://cdn.bookingexperts.nl/uploads/image/image/302582/cover_ResidenceTerschelling_accommodatie_55_slaapkamer_8.jpg",
-);
 
 class CityCard extends StatelessWidget {
   const CityCard({super.key});
@@ -28,7 +26,7 @@ class CityCard extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.black.withAlpha(127),
+                color: primary.withAlpha(127),
               ),
             ),
             Center(

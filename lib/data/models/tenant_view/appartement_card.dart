@@ -5,7 +5,8 @@ import 'package:booking/helper/test/image_network.dart';
 import 'package:flutter/material.dart';
 
 class AppartementCard extends StatelessWidget {
-  const AppartementCard({super.key});
+  final bool isFavorite;
+  const AppartementCard({super.key, required this.isFavorite});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,12 @@ class AppartementCard extends StatelessWidget {
                       child: CircleAvatar(
                         backgroundColor: primary.withAlpha(125),
                         child: Center(
-                          child: Icon(Icons.favorite, color: thirdly),
+                          child: Icon(
+                            Icons.favorite,
+                            color: isFavorite
+                                ? const Color.fromARGB(255, 255, 17, 0)
+                                : thirdly,
+                          ),
                         ),
                       ),
                     ),
@@ -82,10 +88,7 @@ class AppartementCard extends StatelessWidget {
                                   "4.9",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
-                                Icon(
-                                  Icons.star,
-                                  color: const Color.fromARGB(255, 241, 241, 9),
-                                ),
+                                Icon(Icons.star, color: Colors.amber),
                               ],
                             ),
                           ],

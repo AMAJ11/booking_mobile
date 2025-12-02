@@ -1,6 +1,7 @@
 import 'package:booking/helper/constant/routes.dart';
 import 'package:booking/helper/test/navigation_observe.dart';
 import 'package:booking/presentation/views/appartement_details_view.dart';
+import 'package:booking/presentation/views/favorite_apartments_view.dart';
 import 'package:booking/presentation/views/rate_your_stay_view.dart';
 import 'package:booking/presentation/views/tenant_view.dart';
 import 'package:flutter/material.dart';
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
         tenantView: (context) => TenantView(),
         appartementDetailsView: (context) => AppartementDetailsView(),
         rateYourStayView: (context) => RateYourStayView(),
+        favoriteApartments: (context) => FavoriteApartments(),
       },
-      initialRoute: rateYourStayView,
+      initialRoute: favoriteApartments,
     );
   }
 }

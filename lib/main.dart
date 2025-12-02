@@ -1,6 +1,7 @@
 import 'package:booking/helper/constant/routes.dart';
 import 'package:booking/helper/test/navigation_observe.dart';
 import 'package:booking/presentation/views/appartement_details_view.dart';
+import 'package:booking/presentation/views/rate_your_stay_view.dart';
 import 'package:booking/presentation/views/tenant_view.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
       ),
       darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        )
       themeMode: ThemeMode.light,
       */
       debugShowCheckedModeBanner: false,
@@ -27,10 +30,9 @@ class MyApp extends StatelessWidget {
       routes: {
         tenantView: (context) => TenantView(),
         appartementDetailsView: (context) => AppartementDetailsView(),
+        rateYourStayView: (context) => RateYourStayView(),
       },
-      initialRoute: tenantView,
+      initialRoute: rateYourStayView,
     );
   }
 }
-
-

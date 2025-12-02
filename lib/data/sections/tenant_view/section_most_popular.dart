@@ -24,7 +24,10 @@ class SectionMostPopular extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return AspectRatio(aspectRatio: 1, child: AppartementCard());
+                return AspectRatio(
+                  aspectRatio: 1,
+                  child: AppartementCard(isFavorite: false),
+                );
               },
             ),
           ),
